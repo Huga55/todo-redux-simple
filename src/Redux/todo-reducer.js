@@ -30,6 +30,9 @@ const todoReducer = (state = initialState, action) => {
             }
         case ADD_NEW_TODO:
             let nextId = state.tasks[state.tasks.length - 1].id + 1;
+            if(!nextId) {
+                nextId = 1;
+            }
             return {
                 ...state,
                 tasks: [...state.tasks, {id:nextId, text: action.text, status: false}],
