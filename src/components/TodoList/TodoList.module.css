@@ -1,0 +1,87 @@
+.list {
+    margin-top: 30px;
+}
+
+.list__elem {
+    width: 100%;
+    min-height: 30px;
+    margin-bottom: 15px;
+    padding: 5px;
+    padding-left: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ccc;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #079FDB;
+    transition: 0.4s;
+}
+
+.list__elem_active {
+    opacity: 0.3;
+    text-decoration: line-through;
+    color:#000;
+}
+
+.list__text {
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.list__action {
+    display: flex;
+    align-items: center;
+}
+
+.list__delete {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.list__delete:hover {
+    transform: rotate(1080deg);
+}
+
+.list__delete::before {
+    content: "";
+    width: 16px;
+    height: 2px;
+    background-color: red;
+    position: absolute;
+    top: 50%;
+    margin-top: -1px;
+    left: 50%;
+    margin-left: -8px;
+    transform: rotate(45deg);
+    transition: 1s;
+}
+
+.list__delete::after {
+    content: "";
+    width: 16px;
+    height: 2px;
+    background-color: red;
+    position: absolute;
+    top: 50%;
+    margin-top: -1px;
+    left: 50%;
+    margin-left: -8px;
+    transform: rotate(-45deg);
+    transition: 1s;
+}
+
+
+
+.list__complet {
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+    margin-left: auto;
+    cursor: pointer;
+}
