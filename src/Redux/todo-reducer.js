@@ -1,4 +1,3 @@
-import React from "react";
 
 let CHANGE_STATUS_TASK = "CHANGE_STATUS_TASK";
 let DELETE_TODO = "DELETE_TODO";
