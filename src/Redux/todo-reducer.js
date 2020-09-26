@@ -29,8 +29,10 @@ const todoReducer = (state = initialState, action) => {
                 tasks: state.tasks.filter(t => t.id !== action.id),
             }
         case ADD_NEW_TODO:
-            let nextId = state.tasks[state.tasks.length - 1].id + 1;
-            if(!nextId) {
+            let nextId;
+            if(state.tasks.length !== 0) {
+                nextId = state.tasks[state.tasks.length - 1].id + 1;
+            }else {
                 nextId = 1;
             }
             return {
